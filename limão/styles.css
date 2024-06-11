@@ -1,0 +1,52 @@
+body {
+    background-image: url(imagem/1100877965-beneficios-do-limao-1.webp);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF; /* Cor do texto */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00FF00; /* Verde para cabeçalhos */
+}
+
+p {
+    color: #FFFFFF; /* Cor do texto */
+}
+
+button {
+    background-color: #00FF00; /* Verde para botões */
+    color: #FFFFFF; /* Cor do texto nos botões */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009900; /* Verde mais escuro ao passar o mouse */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="number"],
+input[type="submit"] {
+    background-color: #FFFFFF; /* Fundo branco para campos de entrada */
+    color: #000000; /* Texto preto para campos de entrada */
+    border: 1px solid #00FF00; /* Borda verde para campos de entrada */
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #00FF00; /* Verde para botão de envio */
+    color: #FFFFFF; /* Cor do texto no botão de envio */
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #009900; /* Verde mais escuro ao passar o mouse no botão de envio */
+}

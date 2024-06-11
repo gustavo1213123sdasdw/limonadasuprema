@@ -1,0 +1,83 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limestore</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .produto {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .produto img {
+            width: 100%; /* Para ocupar a largura do contêiner */
+            height: auto;
+            max-width: 200px; /* Limita a largura máxima */
+        }
+        @media only screen and (min-width: 600px) {
+            .produto {
+                display: inline-block;
+                width: 30%; /* Ajusta a largura dos produtos para exibição em telas maiores */
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="paginaInicial">
+    <h1>Bem-vindo à Limestore!</h1>
+    <p>Slogan: Se a vida te der limões, faça uma limonada.</p>
+    <button onclick="mostrarPagina('loja')">Visite nossa loja</button>
+</div>
+
+<div id="paginaLoja" class="hidden">
+    <h1>Limestore - Nossa Seleção de Limões</h1>
+    <div class="produto">
+        <img src="limao_siciliano.jpg" alt="Limão Siciliano">
+        <h2>Limão Siciliano</h2>
+        <p>R$ 2,00</p>
+    </div>
+    <div class="produto">
+        <img src="limao_taiti.jpg" alt="Limão Taiti">
+        <h2>Limão Taiti</h2>
+        <p>R$ 1,50</p>
+    </div>
+    <div class="produto">
+        <img src="limao_cravo.jpg" alt="Limão Cravo">
+        <h2>Limão Cravo</h2>
+        <p>R$ 3,00</p>
+    </div>
+    <button onclick="mostrarPagina('pagamento')">Ir para o pagamento</button>
+</div>
+
+<div id="paginaPagamento" class="hidden">
+    <h1>Finalize sua Compra</h1>
+    <form action="processar_pagamento.php" method="POST">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="endereco">Endereço de Entrega:</label><br>
+        <textarea id="endereco" name="endereco" required></textarea><br><br>
+        <label for="quantidade">Quantidade:</label><br>
+        <input type="number" id="quantidade" name="quantidade" min="1" value="1" required><br><br>
+        <input type="submit" value="Finalizar Pagamento">
+    </form>
+</div>
+
+<script>
+    function mostrarPagina(pagina) {
+        document.getElementById('paginaInicial').classList.add('hidden');
+        document.getElementById('paginaLoja').classList.add('hidden');
+        document.getElementById('paginaPagamento').classList.add('hidden');
+        
+        document.getElementById('pagina' + pagina).classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
